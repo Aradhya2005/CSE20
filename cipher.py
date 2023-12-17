@@ -74,19 +74,22 @@ if __name__ == '__main__':
         if choice == 'E':
             message = readfile()
             encoded_message = encode(message)
-            print("\nPlaintext:")
-            print(to_string(message))
-            print("\nCiphertext:")
-            print(to_string(encoded_message))
             writefile(encoded_message)
+            print("Plaintext:")
+            print(to_string(message), end = '')
+            print("Ciphertext:")
+            print(to_string(encoded_message), end = '')
+            
         elif choice == 'D':
             message = readfile()
             decoded_message = decode(message)
-            print("\nCiphertext:")
-            print(to_string(message))
-            print("\nPlaintext:")
-            print(to_string(decoded_message))
             writefile(decoded_message)
+            print("Ciphertext:")
+            print(to_string(message), end = '')
+            
+            print("Plaintext:")
+            print(to_string(decoded_message), end = '')
+            
         elif choice == 'Q':
             print("Goodbye!")
             break
